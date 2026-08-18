@@ -10,7 +10,7 @@ declare global {
 function $<T extends Element>(id: string): T {
   const el = document.getElementById(id);
   if (!el) throw new Error(`No se encontró #${id}`);
-  return el as T;
+  return el as unknown as T;
 }
 
 // ---------- Overlays a pantalla completa (historia / visor de fotos) ----------
